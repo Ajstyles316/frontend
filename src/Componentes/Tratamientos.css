@@ -1,0 +1,53 @@
+.enfermedad-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .enfermedad-form h2 {
+    margin-bottom: 20px;
+  }
+  
+  .select-container {
+    width: 200px;
+    margin-bottom: 20px;
+  }
+  
+  .select {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .table {
+    width: 100%;
+    border-collapse: separate;  
+  }
+  .table th, .table td {
+  padding: 5px;
+  border: 1px solid #ccc;
+  text-align: left;
+}
+
+.table th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+.table tr:nth-child(odd) {
+  background-color: #fff;
+}
+
+.table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
