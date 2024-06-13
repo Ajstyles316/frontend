@@ -1,10 +1,10 @@
 
-import Tratamientos from './Componentes/Tratamientos'; // Importa el componente
-
+//import Tratamientos from './Componentes/Tratamientos'; 
+import Reportes from './Componentes/Reportes';
 const App = () => {
   return (
     <div className="App">
-      <Tratamientos /> 
+      <Reportes /> 
     </div>
   );
 };
