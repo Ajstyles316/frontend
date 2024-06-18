@@ -1,6 +1,7 @@
 import { useState } from 'react';
+
 import enfermedadesData from './enfermedades.json';
-import './Tratamientos.css'; // Importa la hoja de estilos
+
 
 const Tratamientos = () => {
   const [enfermedadSeleccionada, setEnfermedadSeleccionada] = useState('');
@@ -19,7 +20,7 @@ const Tratamientos = () => {
     if (enfermedad) {
       setDatosTabla([enfermedad]);
     } else {
-      setDatosTabla([]); // Limpiar la tabla si no se encuentra la enfermedad
+      setDatosTabla([]); 
     }
   };
 

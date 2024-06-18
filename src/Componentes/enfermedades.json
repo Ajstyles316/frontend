@@ -1,89 +1,112 @@
 {
-    "enfermedades": [
-      {
-        "nombre": "Resfriado común",
-        "recetas": [
-          "Reposo en cama y líquidos abundantes",
-          "Infusiones de hierbas como manzanilla o eucalipto",
-          "Gárgaras con agua tibia y sal"
-        ],
-        "medicamentos": [
-          "Paracetamol o ibuprofeno para aliviar la fiebre y el dolor",
-          "Descongestionantes nasales si hay congestión nasal",
-          "Expectorantes para fluidificar la mucosidad"
-        ],
-        "descripcion": "Es una infección viral leve del sistema respiratorio superior. Los síntomas incluyen secreción nasal, dolor de garganta, tos y, a veces, fiebre."
-      },
-      {
-        "nombre": "Neumonía",
-        "recetas": [
-          "Reposo en cama y líquidos abundantes",
-          "Oxigenoterapia si es necesario",
-          "Antibióticos para tratar la infección bacteriana"
-        ],
-        "medicamentos": [
-          "Analgésicos para aliviar el dolor",
-          "Antiinflamatorios para reducir la inflamación",
-          "Mucolíticos para fluidificar la mucosidad"
-        ],
-        "descripcion": "Es una infección pulmonar que causa inflamación y acumulación de líquido en los alvéolos. Los síntomas incluyen fiebre, tos con expectoración, dificultad para respirar y dolor en el pecho."
-      },
-      {
-        "nombre": "Bronquitis",
-        "recetas": [
-          "Reposo en cama y líquidos abundantes",
-          "Humidificador de aire para aliviar la tos seca",
-          "Ejercicios de respiración para mejorar la ventilación"
-        ],
-        "medicamentos": [
-          "Broncodilatadores para abrir las vías respiratorias",
-          "Expectorantes para fluidificar la mucosidad",
-          "Corticosteroides para reducir la inflamación"
-        ],
-        "descripcion": "Es una inflamación de las vías respiratorias bronquiales. Los síntomas incluyen tos con expectoración, sibilancias, dificultad para respirar y dolor en el pecho."
-      },
-      {
-        "nombre": "Faringitis",
-        "recetas": [
-          "Reposo vocal",
-          "Gárgaras con agua tibia y sal",
-          "Pastillas para chupar para aliviar el dolor de garganta"
-        ],
-        "medicamentos": [
-          "Analgésicos para aliviar el dolor de garganta",
-          "Antiinflamatorios para reducir la inflamación",
-          "Antisépticos locales para combatir la infección"
-        ],
-        "descripcion": "Es una inflamación de la faringe, la parte posterior de la garganta. Los síntomas incluyen dolor de garganta, dificultad para tragar y, a veces, fiebre."
-      },
-      {
-        "nombre": "Laringitis",
-        "recetas": [
-          "Reposo vocal",
-          "Humidificador de aire para aliviar la tos seca",
-          "Evitar irritantes como el humo y el polvo"
-        ],
-        "medicamentos": [
-          "Analgésicos para aliviar el dolor de garganta",
-          "Antiinflamatorios para reducir la inflamación",
-          "Antitusígenos para controlar la tos"
-        ],
-        "descripcion": "Es una inflamación de la laringe, la parte superior de la tráquea. Los síntomas incluyen ronquera, tos seca, dificultad para respirar y dolor de garganta."
-      },
-      {
-        "nombre": "Rinofaringitis",
-        "recetas": [
-          "Reposo en cama y líquidos abundantes",
-          "Suero fisiológico nasal para limpiar las fosas nasales",
-          "Compresas frías en la frente para aliviar la congestión"
-        ],
-        "medicamentos": [
-          "Descongestionantes nasales para aliviar la congestión nasal",
-          "Antihistamínicos para reducir la alergia",
-          "Analgésicos para aliviar el dolor de cabeza"
-        ],
-        "descripcion": "Es una inflamación de la nariz y la faringe. Los síntomas incluyen secreción nasal, congestión nasal, dolor de garganta y, a veces, fiebre."
-      }
-    ]
-  }
-  
+  "enfermedades": [
+    {
+      "nombre": "Resfriado común",
+      "recetas": [
+        "Reposo en cama y líquidos abundantes",
+        "Infusiones de hierbas como manzanilla o eucalipto",
+        "Gárgaras con agua tibia y sal",
+        "Inhalaciones de vapor con mentol",
+        "Evitar el contacto con personas sanas para prevenir el contagio"
+      ],
+      "medicamentos": [
+        "Paracetamol o ibuprofeno para aliviar la fiebre y el dolor",
+        "Descongestionantes nasales si hay congestión nasal",
+        "Expectorantes para fluidificar la mucosidad",
+        "Antihistamínicos para reducir la secreción nasal",
+        "Antitusígenos para calmar la tos"
+      ],
+      "descripcion": "Es una infección viral leve del sistema respiratorio superior. Los síntomas incluyen secreción nasal, dolor de garganta, tos y, a veces, fiebre."
+    },
+    {
+      "nombre": "Neumonía",
+      "recetas": [
+        "Reposo en cama y líquidos abundantes",
+        "Oxigenoterapia si es necesario",
+        "Antibióticos para tratar la infección bacteriana",
+        "Fisioterapia respiratoria para mejorar la ventilación",
+        "Evitar la exposición a irritantes pulmonares"
+      ],
+      "medicamentos": [
+        "Analgésicos para aliviar el dolor",
+        "Antiinflamatorios para reducir la inflamación",
+        "Mucolíticos para fluidificar la mucosidad",
+        "Antibióticos como amoxicilina o azitromicina",
+        "Broncodilatadores para facilitar la respiración"
+      ],
+      "descripcion": "Es una infección pulmonar que causa inflamación y acumulación de líquido en los alvéolos. Los síntomas incluyen fiebre, tos con expectoración, dificultad para respirar y dolor en el pecho."
+    },
+    {
+      "nombre": "Bronquitis",
+      "recetas": [
+        "Reposo en cama y líquidos abundantes",
+        "Humidificador de aire para aliviar la tos seca",
+        "Ejercicios de respiración para mejorar la ventilación",
+        "Evitar el tabaco y ambientes contaminados",
+        "Inhalaciones de vapor con eucalipto"
+      ],
+      "medicamentos": [
+        "Broncodilatadores para abrir las vías respiratorias",
+        "Expectorantes para fluidificar la mucosidad",
+        "Corticosteroides para reducir la inflamación",
+        "Antibióticos si hay infección bacteriana",
+        "Antitusígenos para calmar la tos persistente"
+      ],
+      "descripcion": "Es una inflamación de las vías respiratorias bronquiales. Los síntomas incluyen tos con expectoración, sibilancias, dificultad para respirar y dolor en el pecho."
+    },
+    {
+      "nombre": "Faringitis",
+      "recetas": [
+        "Reposo vocal",
+        "Gárgaras con agua tibia y sal",
+        "Pastillas para chupar para aliviar el dolor de garganta",
+        "Beber líquidos calientes como té con miel",
+        "Evitar alimentos irritantes como los picantes"
+      ],
+      "medicamentos": [
+        "Analgésicos para aliviar el dolor de garganta",
+        "Antiinflamatorios para reducir la inflamación",
+        "Antisépticos locales para combatir la infección",
+        "Antibióticos si la infección es bacteriana",
+        "Descongestionantes si hay congestión nasal"
+      ],
+      "descripcion": "Es una inflamación de la faringe, la parte posterior de la garganta. Los síntomas incluyen dolor de garganta, dificultad para tragar y, a veces, fiebre."
+    },
+    {
+      "nombre": "Laringitis",
+      "recetas": [
+        "Reposo vocal",
+        "Humidificador de aire para aliviar la tos seca",
+        "Evitar irritantes como el humo y el polvo",
+        "Beber líquidos tibios para aliviar la irritación",
+        "Evitar hablar en exceso o gritar"
+      ],
+      "medicamentos": [
+        "Analgésicos para aliviar el dolor de garganta",
+        "Antiinflamatorios para reducir la inflamación",
+        "Antitusígenos para controlar la tos",
+        "Antibióticos si la causa es una infección bacteriana",
+        "Antihistamínicos si hay alergia asociada"
+      ],
+      "descripcion": "Es una inflamación de la laringe, la parte superior de la tráquea. Los síntomas incluyen ronquera, tos seca, dificultad para respirar y dolor de garganta."
+    },
+    {
+      "nombre": "Rinofaringitis",
+      "recetas": [
+        "Reposo en cama y líquidos abundantes",
+        "Suero fisiológico nasal para limpiar las fosas nasales",
+        "Compresas frías en la frente para aliviar la congestión",
+        "Inhalaciones de vapor para descongestionar las vías respiratorias",
+        "Evitar cambios bruscos de temperatura"
+      ],
+      "medicamentos": [
+        "Descongestionantes nasales para aliviar la congestión nasal",
+        "Antihistamínicos para reducir la alergia",
+        "Analgésicos para aliviar el dolor de cabeza",
+        "Antiinflamatorios para reducir la inflamación",
+        "Antibióticos si hay sobreinfección bacteriana"
+      ],
+      "descripcion": "Es una inflamación de la nariz y la faringe. Los síntomas incluyen secreción nasal, congestión nasal, dolor de garganta y, a veces, fiebre."
+    }
+  ]
+}

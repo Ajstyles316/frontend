@@ -1,9 +1,9 @@
 import { useState } from 'react';
-import pacienteData from './paciente.json';
-import './Reportes.css'; 
+
 import jsPDF from 'jspdf';
 import 'jspdf-autotable';
-
+import pacienteData from './paciente.json';
+import 'bootstrap/dist/css/bootstrap.min.css';
 const ReporteMedico = () => {
   const [pacienteSeleccionado, setPacienteSeleccionado] = useState('');
   const [enfermedadSeleccionada, setEnfermedadSeleccionada] = useState('');

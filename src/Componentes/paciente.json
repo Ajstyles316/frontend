@@ -2,7 +2,7 @@
     "pacientes": [
       {
         "nombre": "Juan Pérez",
-        "edad": 45,
+        "edad": 5,
         "genero": "Masculino",
         "historialMedico": [
           {
@@ -39,7 +39,7 @@
       },
       {
         "nombre": "María García",
-        "edad": 38,
+        "edad": 8,
         "genero": "Femenino",
         "historialMedico": [
           {
@@ -76,7 +76,7 @@
       },
       {
         "nombre": "Carlos López",
-        "edad": 50,
+        "edad": 6,
         "genero": "Masculino",
         "historialMedico": [
           {
@@ -110,7 +110,170 @@
             "descripcion": "Es una inflamación de la nariz y la faringe. Los síntomas incluyen secreción nasal, congestión nasal, dolor de garganta y, a veces, fiebre."
           }
         ]
-      }
-    ]
-  }
-  
+      },
+      {
+        "nombre": "Ana Martínez",
+        "edad": 9,
+        "genero": "Femenino",
+        "historialMedico": [
+          {
+            "enfermedad": "Amigdalitis",
+            "fechaDiagnostico": "2023-02-12",
+            "recetas": [
+              "Reposo en cama",
+              "Beber líquidos calientes",
+              "Gárgaras con agua tibia y sal"
+            ],
+            "medicamentos": [
+              "Analgésicos para el dolor",
+              "Antiinflamatorios para reducir la inflamación",
+              "Antibióticos si es bacteriana"
+            ],
+            "descripcion": [
+              "Inflamación de las amígdalas causada por infecciones virales o bacterianas. Síntomas incluyen dolor de garganta, fiebre y dificultad para tragar."
+            ]
+          },
+          {
+            "enfermedad": "Sinusitis",
+            "fechaDiagnostico": "2023-06-18",
+            "recetas": [
+              "Inhalaciones de vapor",
+              "Lavados nasales con solución salina",
+              "Compresas calientes en la cara"
+            ],
+            "medicamentos": [
+              "Descongestionantes nasales",
+              "Antibióticos si es bacteriana",
+              "Analgésicos para el dolor de cabeza"
+            ],
+            "descripcion": [
+              "Inflamación de los senos paranasales que puede ser causada por infecciones, alergias o irritantes ambientales."
+            ]
+          }
+        ]
+      },
+      {
+        "nombre": "Luis Gómez",
+        "edad": 7,
+        "genero": "Masculino",
+        "historialMedico": [
+          {
+            "enfermedad": "Asma",
+            "fechaDiagnostico": "2021-07-08",
+            "recetas": [
+              "Evitar alérgenos y factores desencadenantes",
+            "Uso de inhaladores de rescate en caso de crisis",
+            "Ejercicios de respiración controlada"
+          ],
+          "medicamentos": [
+            "Broncodilatadores de acción rápida",
+            "Corticosteroides inhalados",
+            "Antagonistas de los receptores de leucotrienos"
+          ],
+          "descripcion": [
+            "Enfermedad crónica que inflama y estrecha las vías respiratorias, causando episodios de sibilancias, falta de aire, opresión en el pecho y tos."
+          ]
+        },
+        {
+          "enfermedad": "Rinitis alérgica",
+          "fechaDiagnostico": "2022-11-20",
+          "recetas": [
+            "Evitar alérgenos conocidos como polvo y polen",
+            "Uso de purificadores de aire",
+            "Lavados nasales con solución salina"
+          ],
+          "medicamentos": [
+            "Antihistamínicos orales",
+            "Corticosteroides nasales",
+            "Descongestionantes si es necesario"
+          ],
+          "descripcion": [
+            "Inflamación de la mucosa nasal causada por una reacción alérgica. Síntomas incluyen estornudos, picazón nasal y ojos llorosos."
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Sofía Ruiz",
+      "edad": 4,
+      "genero": "Femenino",
+      "historialMedico": [
+        {
+          "enfermedad": "Migraña",
+          "fechaDiagnostico": "2022-03-05",
+          "recetas": [
+            "Descanso en un ambiente oscuro y tranquilo",
+            "Compresas frías en la frente",
+            "Evitar desencadenantes conocidos"
+          ],
+          "medicamentos": [
+            "Analgésicos como ibuprofeno",
+            "Triptanes para detener los ataques de migraña",
+            "Medicamentos preventivos si son frecuentes"
+          ],
+          "descripcion": [
+            "Dolor de cabeza intenso y debilitante que puede ir acompañado de náuseas, vómitos y sensibilidad a la luz y al sonido."
+          ]
+        },
+        {
+          "enfermedad": "Hipertensión",
+          "fechaDiagnostico": "2023-01-17",
+          "recetas": [
+            "Dieta baja en sodio",
+            "Ejercicio regular",
+            "Control del peso"
+          ],
+          "medicamentos": [
+            "Inhibidores de la ECA",
+            "Bloqueadores de los receptores de angiotensina",
+            "Diuréticos"
+          ],
+          "descripcion": [
+            "Condición crónica en la que la presión sanguínea en las arterias es elevada. Puede llevar a complicaciones graves como enfermedades cardíacas y accidentes cerebrovasculares."
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "Pedro Ramírez",
+      "edad": 6,
+      "genero": "Masculino",
+      "historialMedico": [
+        {
+          "enfermedad": "Diabetes Tipo 2",
+          "fechaDiagnostico": "2019-05-22",
+          "recetas": [
+            "Dieta controlada en carbohidratos",
+            "Ejercicio regular",
+            "Monitoreo constante de los niveles de glucosa"
+          ],
+          "medicamentos": [
+            "Metformina",
+            "Insulina si es necesario",
+            "Inhibidores de SGLT2"
+          ],
+          "descripcion": [
+            "Enfermedad crónica que afecta la forma en que el cuerpo procesa el azúcar (glucosa). Los síntomas incluyen aumento de la sed, micción frecuente y fatiga."
+          ]
+        },
+        {
+          "enfermedad": "Colesterol alto",
+          "fechaDiagnostico": "2020-07-14",
+          "recetas": [
+            "Dieta baja en grasas saturadas y trans",
+            "Ejercicio regular",
+            "Evitar el tabaco"
+          ],
+          "medicamentos": [
+            "Estatinas",
+            "Fibratos",
+            "Inhibidores de la absorción de colesterol"
+          ],
+          "descripcion": [
+            "Condición en la que hay niveles elevados de colesterol en la sangre, lo que puede aumentar el riesgo de enfermedades cardiovasculares."
+          ]
+        }
+      ]
+    }
+  ]
+}

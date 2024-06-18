@@ -1,95 +1,28 @@
-/* Estilos generales */
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
 
 .enfermedad-form {
   background-color: #fff;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 20px;
-  width: 80%;
+  width: 100%;
   max-width: 600px;
   margin: 20px;
   box-sizing: border-box;
 }
-
 .enfermedad-form h2 {
   margin-top: 0;
   color: #333;
 }
-
-/* Select container */
-.select-container {
-  margin-bottom: 20px;
-}
-
-.select {
-  width: 100%;
-  padding: 10px;
-  font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-  transition: border-color 0.3s;
-}
-
 .select:focus {
   border-color: #007bff;
   outline: none;
 }
-
-/* Button */
-.button {
-  display: inline-block;
-  background-color: #007bff;
-  color: #fff;
-  padding: 10px 20px;
-  font-size: 16px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-.button-container {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 20px;
-}
-
-.button:hover {
-  background-color: #0056b3;
-}
-
-/* Table */
 .table {
-  width: 100%;
-  border-collapse: collapse;
   margin-top: 20px;
 }
-
-.table th, .table td {
-  padding: 12px;
-  text-align: left;
-  border-bottom: 1px solid #ddd;
-}
-
-.table th {
-  background-color: #007bff;
-  color: #fff;
-}
-
 .table tr:hover {
   background-color: #f1f1f1;
 }
-
-.table-cell {
-  vertical-align: top;
+.button:hover {
+  background-color: #0056b3;
 }
