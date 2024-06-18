@@ -1,12 +1,24 @@
-import { useState } from 'react';
-
-import enfermedadesData from './enfermedades.json';
-
+import { useState, useEffect } from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import axios from 'axios';
 
 const Tratamientos = () => {
   const [enfermedadSeleccionada, setEnfermedadSeleccionada] = useState('');
   const [datosTabla, setDatosTabla] = useState([]);
-  const enfermedades = enfermedadesData.enfermedades;
+  const [enfermedades, setEnfermedades] = useState([]);
+
+  useEffect(() => {
+    fetchEnfermedades();
+  }, []);
+
+  const fetchEnfermedades = async () => {
+    try {
+      const response = await axios.get('http://localhost:5000/get_enfermedades');
+      setEnfermedades(response.data);
+    } catch (error) {
+      console.error('Error fetching enfermedades:', error);
+    }
+  };
 
   const handleSelectChange = (event) => {
     setEnfermedadSeleccionada(event.target.value);
@@ -20,16 +32,16 @@ const Tratamientos = () => {
     if (enfermedad) {
       setDatosTabla([enfermedad]);
     } else {
-      setDatosTabla([]); 
+      setDatosTabla([]);
     }
   };
-
+  
   return (
     <div className="enfermedad-form">
       <h2>Selección de enfermedad</h2>
       <div className="select-container">
         <select
-          className="select"
+          className="form-select"
           value={enfermedadSeleccionada}
           onChange={handleSelectChange}
         >
@@ -41,11 +53,11 @@ const Tratamientos = () => {
           ))}
         </select>
       </div>
-      <button className="button" onClick={handleButtonClick}>
+      <button className="btn btn-primary mt-3" onClick={handleButtonClick}>
         Tratamiento
       </button>
       {datosTabla.length > 0 && (
-        <table className="table">
+        <table className="table mt-3">
           <thead>
             <tr>
               <th>Receta</th>
@@ -54,12 +66,12 @@ const Tratamientos = () => {
             </tr>
           </thead>
           <tbody>
-            {datosTabla[0].recetas.map((receta, index) => (
-              <tr key={`receta-${index}`}>
-                <td className="table-cell">{receta}</td>
-                <td className="table-cell">{datosTabla[0].medicamentos[index] || ''}</td>
+            {datosTabla[0].tratamientos.map((tratamiento, index) => (
+              <tr key={`tratamiento-${index}`}>
+                <td className="table-cell">{tratamiento.receta}</td>
+                <td className="table-cell">{tratamiento.medicamento}</td>
                 {index === 0 && (
-                  <td className="table-cell" rowSpan={datosTabla[0].recetas.length}>
+                  <td className="table-cell" rowSpan={datosTabla[0].tratamientos.length}>
                     {datosTabla[0].descripcion}
                   </td>
                 )}

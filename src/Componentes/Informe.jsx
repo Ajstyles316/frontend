@@ -1,34 +1,33 @@
-import { useState } from 'react';
-
+import { useState, useEffect } from 'react';
 import jsPDF from 'jspdf';
 import 'jspdf-autotable';
-import pacienteData from './paciente.json';
-import 'bootstrap/dist/css/bootstrap.min.css';
-const ReporteMedico = () => {
+import axios from 'axios';
+
+const Informe = () => {
+  const [pacientes, setPacientes] = useState([]);
   const [pacienteSeleccionado, setPacienteSeleccionado] = useState('');
-  const [enfermedadSeleccionada, setEnfermedadSeleccionada] = useState('');
   const [datosTabla, setDatosTabla] = useState([]);
-  const pacientes = pacienteData.pacientes;
+
+  useEffect(() => {
+    axios.get('http://localhost:5000/get_pacientes')
+      .then(response => {
+        setPacientes(response.data);
+      })
+      .catch(error => {
+        console.error('Error fetching data:', error);
+      });
+  }, []);
 
   const handlePacienteChange = (event) => {
     setPacienteSeleccionado(event.target.value);
-    setEnfermedadSeleccionada('');
     setDatosTabla([]);
   };
 
-  const handleEnfermedadChange = (event) => {
-    setEnfermedadSeleccionada(event.target.value);
-  };
-
   const handleButtonClick = () => {
-    const paciente = pacientes.find(
-      (paciente) => paciente.nombre === pacienteSeleccionado
-    );
+    const paciente = pacientes.find(paciente => paciente.nombre === pacienteSeleccionado);
 
     if (paciente) {
-      const enfermedad = paciente.historialMedico.find(
-        (enfermedad) => enfermedad.enfermedad === enfermedadSeleccionada
-      );
+      const enfermedad = paciente.historialMedico[0];
 
       if (enfermedad) {
         setDatosTabla([enfermedad]);
@@ -44,14 +43,12 @@ const ReporteMedico = () => {
     doc.text('Reporte Médico', 14, 16);
     doc.setFontSize(12);
     if (pacienteSeleccionado && datosTabla.length > 0) {
-      const paciente = pacientes.find(
-        (paciente) => paciente.nombre === pacienteSeleccionado
-      );
+      const paciente = pacientes.find(paciente => paciente.nombre === pacienteSeleccionado);
 
       doc.text(`Nombre: ${paciente.nombre}`, 14, 24);
       doc.text(`Edad: ${paciente.edad}`, 14, 30);
       doc.text(`Género: ${paciente.genero}`, 14, 36);
-      doc.text(`Enfermedad: ${enfermedadSeleccionada}`, 14, 42);
+      doc.text(`Enfermedad: ${datosTabla[0].enfermedad}`, 14, 42);
       doc.text('Fecha de Diagnóstico:', 14, 48);
       doc.text(datosTabla[0].fechaDiagnostico, 70, 48);
 
@@ -71,19 +68,13 @@ const ReporteMedico = () => {
       });
 
       doc.text('Descripción:', 14, doc.lastAutoTable.finalY + 20);
-      doc.text(datosTabla[0].descripcion, 14, doc.lastAutoTable.finalY + 26, {
-        maxWidth: 180,
-      });
+      doc.text(datosTabla[0].descripcion, 14, doc.lastAutoTable.finalY + 26, { maxWidth: 180 });
     } else {
       doc.text('No hay datos disponibles.', 14, 24);
     }
 
     doc.save('reporte_medico.pdf');
   };
-
-  const paciente = pacientes.find(
-    (paciente) => paciente.nombre === pacienteSeleccionado
-  );
 
   return (
     <div className="reporte-medico-form">
@@ -102,26 +93,6 @@ const ReporteMedico = () => {
           ))}
         </select>
       </div>
-      {paciente && (
-        <>
-          <p>Edad: {paciente.edad}</p>
-          <p>Género: {paciente.genero}</p>
-          <div className="select-container">
-            <select
-              className="select"
-              value={enfermedadSeleccionada}
-              onChange={handleEnfermedadChange}
-            >
-              <option value="">Seleccionar enfermedad</option>
-              {paciente.historialMedico.map((enfermedad) => (
-                <option key={enfermedad.enfermedad} value={enfermedad.enfermedad}>
-                  {enfermedad.enfermedad}
-                </option>
-              ))}
-            </select>
-          </div>
-        </>
-      )}
       <div className="button-container">
         <button className="button" onClick={handleButtonClick}>
           Ver Reporte
@@ -164,4 +135,4 @@ const ReporteMedico = () => {
   );
 };
 
-export default ReporteMedico;
+export default Informe;
